@@ -36,8 +36,6 @@ class QuizBrain {
   void nextQuestion() {
     if (_questionNumber < _questionTank.length - 1) ;
     _questionNumber++;
-    print(_questionNumber);
-    print(_questionTank.length);
   }
 
   String getQuestionText() {
