@@ -33,8 +33,9 @@ class QuizBrain {
         true),
   ];
   void nextQuestion() {
-    if (_questionNumber < _questionTank.length - 1) ;
-    _questionNumber++;
+    if (_questionNumber < _questionTank.length - 1) {
+      _questionNumber++;
+    }
   }
 
   String getQuestionText() {
@@ -43,5 +44,17 @@ class QuizBrain {
 
   bool getCorrectAnswer() {
     return _questionTank[_questionNumber].questionAnswer;
+  }
+
+  bool isFinished() {
+    if (_questionNumber == _questionTank.length - 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  void reset() {
+    _questionNumber = 0;
   }
 }
